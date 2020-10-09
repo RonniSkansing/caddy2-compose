@@ -1,0 +1,8 @@
+127.0.0.1:80 {
+    respond "Hello, world!"
+}
+
+127.0.0.1:443 {
+    tls /etc/caddy/self_signed_certs/cert.crt /etc/caddy/self_signed_certs/cert.key
+    respond "Hello, world!"
+}

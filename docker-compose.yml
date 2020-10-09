@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  proxy:
+    image: caddy:2.2.0-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ./caddy/self_signed_certs:/etc/caddy/self_signed_certs
